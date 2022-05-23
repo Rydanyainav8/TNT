@@ -2,39 +2,28 @@
 
 namespace App\Form;
 
-use App\Entity\Materiel;
-use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\EmailType;
 use Symfony\Component\Form\Extension\Core\Type\NumberType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\FormBuilderInterface;
+use Symfony\Component\OptionsResolver\OptionsResolver;
 
-class CommandType extends AbstractType
+class UniqueCommandeType extends AbstractType
 {
-
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
-        $builder 
-            ->add('nom', EntityType::class,[
-                'class' => Materiel::class,
-                'choice_label' => function($materiel){
-                    return $materiel->getNom();
-                },
-                'label' => 'nom',
-                'multiple' => true,
-                'expanded' => true,
-            ])
-            ->add('adresse_email', EmailType::class,[
-                'label' => 'Adresse Email',
+        $builder
+            ->add('adresse_email', EmailType::class, [
+                'label' => 'Votre Adresse Email',
                 'mapped' => false,
                 'required' => true,
                 'attr' => [
                     'placeholder' => 'user@example.com'
                 ]
             ])
-            ->add('numero', NumberType::class,[
-                'label' => 'Numéro',
+            ->add('numero', NumberType::class, [
+                'label' => 'Votre numéro',
                 'mapped' => false,
                 'required' => true,
                 'html5' => true,
@@ -42,8 +31,13 @@ class CommandType extends AbstractType
                     'placeholder' => '+261...'
                 ]
             ])
-            ->add('Valider', SubmitType::class)
-        ;
+            ->add('Valider', SubmitType::class);
     }
 
+    public function configureOptions(OptionsResolver $resolver): void
+    {
+        $resolver->setDefaults([
+            // Configure your form options here
+        ]);
+    }
 }

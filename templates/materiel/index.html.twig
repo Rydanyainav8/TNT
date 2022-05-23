@@ -15,9 +15,12 @@
 				<div class="card-header">{{ materiel.nom }}</div>
 				<div class="divider"></div>
 				<div class="card-content">
-					{{ materiel.detail }}
+					{# {{ materiel.detail }} #}
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae provident vitae cum consequatur maxime rem odit alias quam, rerum iusto?
 				</div>
-				<div class="card-footer">Card Footer</div>
+				<div class="card-footer">
+					<a href="{{ path('app_contactOne', {id: materiel.id})}}" class="boutn blue">Commander</a>
+				</div>
 			</div>
 		{% endfor %}
 	</div>
