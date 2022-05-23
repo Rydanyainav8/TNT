@@ -18,9 +18,7 @@ class AdminController extends AbstractController
     #[Route('/admin', name: 'app_admin')]
     public function indexAdmin(): Response
     {
-        return $this->render('admin/index.html.twig', [
-            'controller_name' => 'AdminController',
-        ]);
+        return $this->redirectToRoute('index_mat');
     }
     
     #[Route('/admin/MatCreate', name: 'create_mat')]
@@ -98,6 +96,7 @@ class AdminController extends AbstractController
     {
         $em->remove($materiel);
         $em->flush();
+        $this->addFlash('success', 'article suprimé avec succès');
         return $this->redirectToRoute('index_mat');
     }
 }

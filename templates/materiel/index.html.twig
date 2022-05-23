@@ -1,20 +1,24 @@
-{% extends 'base.html.twig' %}
+{% include "navbar.html.twig" %}
 
-{% block title %}Hello MaterielController!{% endblock %}
+{% block title %}Hello MaterielController!
+{% endblock %}
 
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
-
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
-
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href="{{ 'C:/Users/RYDAN/Documents/PROJET/TNT/src/Controller/MaterielController.php'|file_link(0) }}">src/Controller/MaterielController.php</a></code></li>
-        <li>Your template at <code><a href="{{ 'C:/Users/RYDAN/Documents/PROJET/TNT/templates/materiel/index.html.twig'|file_link(0) }}">templates/materiel/index.html.twig</a></code></li>
-    </ul>
-</div>
+	<div class="grix xs4 gutter-xs2">
+		{% for materiel in materiels %}
+			<div class="card light-shadow-2 white">
+				<div
+					class="card-image">
+					{# <img src="https://picsum.photos/800/600?random=1" alt="logo"/> #}
+					<img src="https://via.placeholder.com/100" alt="">
+				</div>
+				<div class="card-header">{{ materiel.nom }}</div>
+				<div class="divider"></div>
+				<div class="card-content">
+					{{ materiel.detail }}
+				</div>
+				<div class="card-footer">Card Footer</div>
+			</div>
+		{% endfor %}
+	</div>
 {% endblock %}

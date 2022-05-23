@@ -5,6 +5,11 @@
 
 {% block body %}
 	<a href="{{ path('create_mat') }}" class="btn">Ajouter</a>
+	
+	{% for message in app.flashes('success') %}
+		{{ message }}
+	{% endfor %}
+
 	<div class="containeRy">
 		<div class="responsive-table">
 			<table class="table striped">
@@ -20,7 +25,10 @@
 					{% for materiel in materiels %}
 						<tr>
 							<td>
-								<img src="{{ asset('uploads/img/' ~ materiel.image) }}" alt="">
+								{# <img src="{{ asset('uploads/img/' ~ materiel.image) }}" alt=""> #}
+								{# <img src="{{ materiel.image }}" alt=""> #}
+								{# <img src="http://placehold.it/350x150" alt=""> #}
+								<img src="https://via.placeholder.com/100" alt="">
 							</td>
 							<td>{{ materiel.nom }}</td>
 							<td>{{ materiel.detail }}</td>

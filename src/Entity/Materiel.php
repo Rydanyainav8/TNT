@@ -39,6 +39,10 @@ class Materiel
         return $this;
     }
 
+    public function __toString()
+    {
+        return $this->nom;   
+    }
     public function getDetail(): ?string
     {
         return $this->detail;
