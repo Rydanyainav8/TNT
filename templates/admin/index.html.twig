@@ -1,0 +1,47 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello AdminController!
+{% endblock %}
+
+{% block body %}
+	<a href="{{ path('create_mat') }}" class="btn">Ajouter</a>
+	
+	{% for message in app.flashes('success') %}
+		{{ message }}
+	{% endfor %}
+
+	<div class="containeRy">
+		<div class="responsive-table">
+			<table class="table striped">
+				<thead>
+					<tr>
+						<th>Image</th>
+						<th>Nom</th>
+						<th>Detail</th>
+						<th>Action</th>
+					</tr>
+				</thead>
+				<tbody>
+					{% for materiel in materiels %}
+						<tr>
+							<td>
+								{# <img src="{{ asset('uploads/img/' ~ materiel.image) }}" alt=""> #}
+								{# <img src="{{ materiel.image }}" alt=""> #}
+								{# <img src="http://placehold.it/350x150" alt=""> #}
+								<img src="https://via.placeholder.com/100" alt="">
+							</td>
+							<td>{{ materiel.nom }}</td>
+							<td>{{ materiel.detail }}</td>
+							<td>
+								<a href="{{ path('edit_mat', {id: materiel.id}) }}">Modifier</a>
+							</td>			
+							<td>
+								<a href="{{ path('delete_mat', {id: materiel.id}) }}">Supprimer</a>
+							</td>
+						</tr>
+					{% endfor %}
+				</tbody>
+			</table>
+		</div>
+	</div>
+{% endblock %}

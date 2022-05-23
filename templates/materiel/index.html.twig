@@ -1,0 +1,27 @@
+{% include "navbar.html.twig" %}
+
+{% block title %}Hello MaterielController!
+{% endblock %}
+
+{% block body %}
+	<div class="grix xs4 gutter-xs2">
+		{% for materiel in materiels %}
+			<div class="card light-shadow-2 white">
+				<div
+					class="card-image">
+					{# <img src="https://picsum.photos/800/600?random=1" alt="logo"/> #}
+					<img src="https://via.placeholder.com/100" alt="">
+				</div>
+				<div class="card-header">{{ materiel.nom }}</div>
+				<div class="divider"></div>
+				<div class="card-content">
+					{# {{ materiel.detail }} #}
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae provident vitae cum consequatur maxime rem odit alias quam, rerum iusto?
+				</div>
+				<div class="card-footer">
+					<a href="{{ path('app_contactOne', {id: materiel.id})}}" class="boutn blue">Commander</a>
+				</div>
+			</div>
+		{% endfor %}
+	</div>
+{% endblock %}

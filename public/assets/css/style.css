@@ -1,0 +1,90 @@
+.containeRy
+{
+    margin-top: 100px;
+}
+
+.navbar
+{
+    position: fixed;
+    width: 100%;
+    padding: 15px 0;
+    z-index: 999;
+    font-family: 'Ubuntu', sans-serif;
+    transition: all 0.3s ease;
+    background: #3e3e3e;
+}
+.max-width
+{
+    max-width: 1800px;
+    padding: 0 80px;
+    margin: auto;
+}
+.navbar .max-width
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.navbar .logo a
+{
+    color: #fff;
+    font-size: 35px;
+    font-weight: 600;
+}
+.navbar .menu li
+{
+    list-style: none;
+    display: inline-block;
+}
+.navbar .menu li a
+{
+    display: block;
+    font-size: 18px;
+    font-weight: 500;
+    margin-left: 25px;
+    transition: color 0.4s ease;
+}
+.navbar .menu li a:hover,
+.fa-sign-out-alt:hover
+{
+  transition: all 0.4s;
+  color: orangered;
+}
+.menu-btn
+{
+    color: #fff;
+    font-size: 23px;
+    cursor: pointer;
+    display: none;
+}
+.navbar .logo a span
+{
+  color: orangered;
+}
+.mg-left
+{
+    margin-left: 35px;
+}
+.mgxxc-right
+{
+    margin-right: 35px;
+}
+/* .blue
+{
+    color: #f1f1f1;
+    background-color: #10c8ff;
+    border-radius: 3px;
+} */
+.boutn
+{
+  padding: 10px 25px 10px 25px;
+  cursor: pointer;
+  border: 1px solid #10c8ff;
+  display: block;
+  border-radius: 5px;
+}
+.contimg img
+{
+    width: 400px;
+    height: 350px;
+}

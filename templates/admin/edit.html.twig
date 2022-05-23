@@ -1,0 +1,8 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+    {{ form_start(form) }}
+        <img src="{{ asset('uploads/img/') ~ Vimg }}" alt="">
+        <button type="submit">Valider</button>
+    {{ form_end(form) }}
+{% endblock %}

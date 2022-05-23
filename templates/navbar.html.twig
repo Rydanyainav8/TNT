@@ -1,0 +1,11 @@
+{% extends "base.html.twig" %}
+{% block body %}
+	<nav class="navbar shadow-1 primary">
+		<a href="#" class="navbar-brand mg-left">TNT</a>
+		<div class="navbar-menu ml-auto ">
+			<a class="navbar-link" href="{{ path('app_home') }}">Accueil</a>
+			<a class="navbar-link" href="{{ path('app_materiel') }}">Materiels</a>
+			<a class="navbar-link" href="{{ path('app_contact') }}">Passer une commande</a>
+		</div>
+	</nav>
+{% endblock %}
