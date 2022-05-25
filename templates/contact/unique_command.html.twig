@@ -1,15 +1,19 @@
 {% include "navbar.html.twig" %}
 
-{% block title %}Hello ContactController!
-{% endblock %}
 
 {% block body %}
-	{{ form_start(form)}}
-	<div class="contimg">
-		<img src="{{ asset('uploads/img/') ~ img }}" alt="">
+	<div class="contener2">
+		<div class="centrage carte pad">
+			{{ form_start(form)}}
+			<div class="contimg">
+				<img src="{{ asset('uploads/img/') ~ img }}" alt="">
+			</div>
+			<div class="divider"></div>
+			<h4>
+				{{ nomMat }}
+			</h4>
+			
+			{{ form_end(form)}}
+		</div>
 	</div>
-    <h4>
-        {{ nomMat }}
-    </h4>
-	{{ form_end(form)}}
 {% endblock %}
