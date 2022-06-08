@@ -1,8 +1,26 @@
 {% include "navbar.html.twig" %}
-
-{% block title %}Hello ContactController!{% endblock %}
+{% form_theme form "bootstrap_5_layout.html.twig" %}
 
 {% block body %}
-    {{ form_start(form)}}
-    {{ form_end(form)}}
+	<div class="contenty">
+		<div class="contener2">
+			<div class="centrage carte pad">
+				{{ form_start(form)}}
+				<div class="Gflex">
+					<div class="flex1">
+                        {{ form_label(form.adresse_email) }}
+						{{ form_widget(form.adresse_email) }}
+                        {{ form_label(form.numero) }}
+						{{ form_widget(form.numero) }}
+					</div>
+					<div class="flex1">
+                        {{ form_label(form.nom) }}
+                        <div class="divider"></div>
+						{{ form_widget(form.nom) }}
+					</div>
+				</div>
+				{{ form_end(form)}}
+			</div>
+		</div>
+	</div>
 {% endblock %}

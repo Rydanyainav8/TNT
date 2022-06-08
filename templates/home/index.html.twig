@@ -1,7 +1,115 @@
 {% include "navbar.html.twig" %}
 
-{% block title %}Hello HomeController!{% endblock %}
 
 {% block body %}
-    <center>BIENVENUE</center>
+	<section class="home">
+		<div class="max-width">
+			<div class="home-content">
+				<div class="text1">Spécialiste en cablage TNT</div>
+				<div class="text2">Vente et installation matériels</div>
+			</div>
+		</div>
+	</section>
+	<section class="service">
+		<div class="max-width">
+			<h2 class="title">Services</h2>
+			<p class="text3">Nous sommes une société de vente et d'installation de matériel de Télévision Numérique Terrestre. Nous oeuvrons dans le domaine de câblage hôtel et appartement avec plus de 10 années d'expérience dans le norme de services cablâge hôtel et cablage collectif d'un appartement partout à Madagascar.</p>
+		</div>
+	</section>
+	<section class="realisation">
+		<div class="max-width">
+			<h2 class="title">Réalisation</h2>
+			<div class="carousel owl-carousel">
+				<div class="boxa carte">
+
+					<div class="card-header">Câblage hôtel</div>
+					<div
+						class="imgContent">
+						{# <img src="https://picsum.photos/800/450?random=1" alt="img1"/> #}
+						<img src="/assets/img/hotel.jpg" alt="">
+					</div>
+
+				</div>
+				<div class="boxa carte">
+
+					<div class="card-header">Câblage maison d'hôtes</div>
+					<div class="imgContent">
+						<img
+						src="https://picsum.photos/800/450?random=1" alt="img1"/>
+					{# <img src="/assets/img/hotel.jpg" alt=""> #}
+					</div>
+
+				</div>
+				<div class="boxa carte">
+
+					<div class="card-header">Câblage bungalow</div>
+					<div class="imgContent">
+						<img
+						src="https://picsum.photos/800/450?random=1" alt="img1"/>
+					{# <img src="/assets/img/hotel.jpg" alt=""> #}
+					</div>
+
+				</div>
+				<div class="boxa carte">
+
+					<div class="card-header">Câblage appartement à étage</div>
+					<div class="imgContent">
+						<img
+						src="https://picsum.photos/800/450?random=1" alt="img1"/>
+					{# <img src="/assets/img/hotel.jpg" alt=""> #}
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="contact">
+		<div class="max-width">
+			<div class="title">Nous contacter</div>
+			<div class="contact-content">
+				<div class="row ">
+					<div class="flex3 wdth">
+						<i class="fab fa-2x fa-facebook"></i>
+					</div>
+					<div class="flex3">
+						<div class="head">Facebook</div>
+						<div class="sub-title">Spécialiste en cablage TNT</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="flex3 wdth">
+						<i class="fas fa-2x fa-phone"></i>
+					</div>
+					<div class="flex3">
+						<div class="head">Téléphone</div>
+						<div class="sub-title">034 59 501 89</div>
+						<div class="sub-title">033 01 384 41</div>
+					</div>
+				</div>
+				<div class="row ">
+					<div class="flex3 wdth">
+						<i class="fas fa-2x fa-envelope"></i>
+					</div>
+					<div class="flex3">
+						<div class="head">Email</div>
+						<div class="sub-title">rn2servicescommerciales.@yahoo.com</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="flex3 wdth">
+						<i class="fas fa-2x fa-map-marker-alt"></i>
+					</div>
+					<div class="flex3">
+						<div class="head">Adresse</div>
+						<div class="sub-title">Lot IIH35DA Ankadindramamy</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	{% block javascripts %}
+		{# // <script src="https://cdn.jsdelivr.net/npm/axentix@2.0.1/dist/axentix.min.js"></script> #}
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+		<script src="/assets/js/scripts.js"></script>
+	{% endblock %}
 {% endblock %}
