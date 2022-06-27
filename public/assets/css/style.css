@@ -9,9 +9,9 @@ body{
 }
 .containeRy
 {
-    margin-top: 100px;
-    margin-left: 10px;
-    margin-right: 10px;
+    margin-top: 20px;
+    margin-left: 50px;
+    margin-right: 50px;
 }
 
 .navbar
@@ -22,8 +22,12 @@ body{
     z-index: 999;
     font-family: 'Ubuntu', sans-serif;
     transition: all 0.3s ease;
-    background: #3e3e3e;
+    /* background: #3e3e3e; */
     color: #fff;
+}
+.blc
+{
+    background: #00a2ed;
 } 
 .max-width
 {
@@ -56,20 +60,31 @@ body{
     margin-left: 25px;
     transition: color 0.4s ease;
 }
+
+.navbar .navbar-menu .navbar-link
+{
+    transition: 0.4s;
+}
 .navbar .navbar-menu a:hover
 {
-    color: #00a2ed;
+    /* color: #00a2ed; */
+    color: #f1f1f1;
     background-color: transparent;
+    /* transform: translatey(-4px); */
+    transform: scale(1.1);
+    transition: all 0.4s;
 }
+
 .navbar-link
 {
     margin-left: 10px;
     margin-right: 10px;
 }
+
 .navbar.sticky
 {
     padding: 15px 0;
-    background: #111;  /* fallback for old browsers */
+    background: #00a2ed;  /* fallback for old browsers */
 }
 .menu-btn
 {
@@ -142,7 +157,8 @@ body{
 {
     margin-left: 20px;
     margin-right: 20px;
-    margin-top: 35px;
+    /* margin-top: 35px; */
+    padding-top: 60px;
 }
 .contener2
 {
@@ -154,7 +170,9 @@ body{
 }
 .contenty
 {
-    margin-top: 35px;
+    /* margin-top: 35px; */
+    padding-top: 60px;
+
 }
 .carte,
 .carteborder
@@ -191,7 +209,6 @@ body{
 {
     display: flex;
     align-items: center;
-
 }
 .flex1
 {
@@ -203,14 +220,17 @@ body{
     flex: 1;
     margin-inline: 8px;
 }
+.mg40{
+    margin-right: 40px;
+}
+
 /*********RESPONSIVE**********/
 @media screen and (max-height: 635px)
 {
     .contener2
     {
-        height: 80vh;
+        height: 100vh;
     }
-    
 }
 /*****************************/
 
@@ -224,26 +244,26 @@ body{
 }
 .addbtn
 {
-    position: absolute;
-    top: 20px;
-    left: 93%;
-    border: 1px solid #00a2ed;
+    /* border: 1px solid #00a2ed; */
+    /* border: 1px solid #fff; */
     padding: 4px 15px;
     background-color: transparent;
-    color: #00a2ed;
-    transform: translateX(-50%);
+    /* color: #00a2ed; */
+    color: #fff;
     transition: all 0.4s;
     font-size: 20px;
-    font-weight: 600;
+    font-weight: 500;
     border-radius: 3px;
     letter-spacing: 3px;
+    font-family: 'Ubuntu', sans-serif;
+    transition: all 0.4s;
 }
 .addbtn:hover
 {
-    background-color: #00a2ed;
-    color: #f1f1f1;
+    /* background-color: #00a2ed; */
+    background-color: #fff;
+    color: #000;
     transition: all 0.4s;
-
 }
 .table thead
 {
@@ -301,7 +321,16 @@ body{
 {
     color: #00a2ed;
     transition: all 0.4s;
+}
+.fa-sign-out-alt
+{
+    font-size: 20px;
+    transition: 0.5s;
 
+}
+.fa-sign-out-alt:hover{
+    transform: scale(1.5);
+    transition: 0.5s;
 }
 .contentL3
 {
@@ -310,9 +339,10 @@ body{
 .home
 {
     display: flex;
-    background-image: url('sw.jpg');
-    background-size: cover;
+    background-image: url('cropped.jpg');
+    background-size: contain;
     background-attachment: fixed;
+    background-repeat: no-repeat;
     height: auto;
     min-height: 500px;
     font-family: 'Ubuntu', sans-serif;
@@ -326,7 +356,7 @@ body{
 }
 .home-content .text1
 {
-    font-size: 72px;
+    font-size: 3rem;
 }
 .home-content .text2
 {
@@ -338,15 +368,15 @@ body{
 }
 .service .title,
 .realisation .title,
-.contact .title
+.contact .title,
+.work .title
 {
     position: relative;
     text-align: center;
     font-size: 40px;
     font-weight: 500;
-    margin-bottom: 60px;
-    padding-bottom: 20px;
     font-family: 'Ubuntu', sans-serif;
+    color: #464444;
 }
 
 .service .text3
@@ -406,9 +436,19 @@ body{
     height: 13px;
     width: 13px;
     margin: 0 5px;
-    outline: noe!important;
+    outline: none!important;
     border-radius: 50%;
-    border: 2px solid #00a2ed;
+    border: 2px solid #00a2ed!important;
+}
+.owl-dot.active
+{
+    width: 35px;
+    border-radius: 14px;
+}
+.owl-dot.active,
+.owl-dot:hover
+{
+    background: #00a2ed!important;
 }
 .flex3
 {
@@ -433,4 +473,145 @@ body{
 .contact-content
 {
     line-height: 23px;
+}
+.row .flex3 i
+{
+    color: #3e3e3ec2;
+}
+.contact
+{
+    margin-top: 20px;
+}
+.card-header
+{
+    font-family: 'Ubuntu', sans-serif;
+}
+/* .card-content
+{
+    font-family: 'Poppins', sans-serif;
+} */
+.text4
+{
+    font-size: 3vw;
+    font-family: 'Ubuntu', sans-serif;
+}
+.jc
+{
+    display: flex;
+    justify-content: center;
+}
+.jc2
+{
+    display: flex;
+    justify-content: end;
+    width: 180px;
+}
+.marze
+{
+    /* margin-top: 20px; */
+    background: #363636;
+    color: #fff;
+    padding: 15px 0;
+}
+.succesmsg
+{
+    color: #039103;
+    text-align: center;
+    font-family: 'Ubuntu';
+    font-size: 15px;
+    font-weight: 500;
+}
+.table tbody
+{
+    font-family: 'Poppins', sans-serif;
+}
+.grix .card
+{
+    align-self: unset;
+}
+.card-image img
+{
+    width: 200px;
+    height: 350px;
+}
+tbody img
+{
+    width: 50px;
+    height: 50px;
+}
+.flex3 .sub-title span
+{
+    letter-spacing: 5px;
+}
+.dividera
+{
+    width: 50%;
+    height: 5px;
+    background-color: #00a2ed;
+    position: relative;
+    left: 50%;
+    top: -35px;
+    transform: translateX(-50%);
+    margin-bottom: 50px;
+}
+.rectifi
+{
+    z-index: 2;
+    background: #f1f1f1;
+    width: 225px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.w35P
+{
+    width: 35%;
+}
+.top25
+{
+    top: -25px;
+}
+.contact
+{
+    margin-top: 80px;
+}
+.sub-title a:hover
+{
+    color: #00a2ed;
+    transition: all 0.4s;
+}
+.sub-title a{
+    transition: all 0.4s;
+}
+.btnUD
+{
+    padding: 3px 5px;
+    border: 1px solid #00a2ed;
+    border-radius: 4px;
+}
+.ble
+{
+    color: #00a2ed;
+    transition: 0.4s;
+
+}
+.ble:hover
+{
+    color: #fff;
+    background-color: #00a2ed;
+    transition: 0.4s;
+
+}
+.redy
+{
+    color: #fff;
+    background-color: red;
+    border: 1px solid red;
+    margin-left: 20px;
+    transition: 0.4s;
+}
+.redy:hover
+{
+    background-color: transparent;
+    color: red;
+    transition: 0.4s;
 }

@@ -96,7 +96,7 @@ class AdminController extends AbstractController
     {
         $em->remove($materiel);
         $em->flush();
-        $this->addFlash('success', 'article suprimé avec succès');
+        $this->addFlash('success', 'Article supprimé avec succès');
         return $this->redirectToRoute('index_mat');
     }
 }

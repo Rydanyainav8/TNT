@@ -1,4 +1,4 @@
-{% include "navbar.html.twig" %}
+{% include "navbar2.html.twig" %}
 
 
 {% block body %}
@@ -6,17 +6,17 @@
 		<div class="grix xs4 gutter-xs2">
 			{% for materiel in materiels %}
 				<div class="card light-shadow-2 white">
-					<div
-						class="card-image">
+					<div class="card-image">
 						{# <img src="https://picsum.photos/800/600?random=1" alt="logo"/> #}
-						<img src="https://via.placeholder.com/100" alt="">
+						{# <img src="https://via.placeholder.com/100" alt=""> #}
+						<img src="{{asset('uploads/img/' ~ materiel.image)}}" alt="">
 					</div>
 					<div class="card-header">{{ materiel.nom }}</div>
 					<div class="divider"></div>
 					<div
 						class="card-content">
-						{# {{ materiel.detail }} #}
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae provident vitae cum consequatur maxime rem odit alias quam, rerum iusto?
+						{{ materiel.detail }}
+						{# Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae provident vitae cum consequatur maxime rem odit alias quam, rerum iusto? #}
 					</div>
 					<div class="card-footer">
 						<div class="end">

@@ -4,22 +4,35 @@
 {% endblock %}
 
 {% block body %}
-	<div class="addbtn">
-		<a href="{{ path('create_mat') }}">
-			<div class="GflexBtn">
-				<div class="flex2">
-					<i class="fal fa-2x fa-plus"></i>
-					{# <i class="fal fa-2x fa-plus-circle"></i> #}
-				</div>
-				<div class="flex2">Ajouter</div>
+	<div class="Gflex marze">
+		<div class="flex1 jc">
+			<div class="text4">Administrateur SatTVBusiness</div>
+		</div>
+		<div class="flex1 jc2">
+			<div class="addbtxn">
+				<a href="{{ path('create_mat') }}">
+					<div class="GflexBtn mg40">
+						<div class="flex2 addbtn">
+							<i class="fal fa-2x fa-plus"></i>
+							{# <i class="fal fa-2x fa-plus-circle"></i> #}
+						</div>
+						{# <div class="flex2">Ajouter</div> #}
+						<div class="flex2">
+							<a href="{{ path('app_logout') }}">
+								<i class="far fa-sign-out-alt"></i>
+								{# <i class="fas fa-2x fa-portal-exit"></i> #}
+							</a>
+						</div>
+					</div>
+				</a>
 			</div>
-		</a>
+		</div>
 	</div>
+	<div class="divider"></div>
 
 	{% for message in app.flashes('success') %}
-		{{ message }}
+		<div class="succesmsg">{{ message }}</div>
 	{% endfor %}
-
 	<div class="containeRy">
 		<div class="table-responsive carteborder">
 			<table class="table table-striped">
@@ -35,19 +48,20 @@
 					{% for materiel in materiels %}
 						<tr>
 							<td>
-								{# <img src="{{ asset('uploads/img/' ~ materiel.image) }}" alt=""> #}
+								<img src="{{ asset('uploads/img/' ~ materiel.image) }}" alt="">
 								{# <img src="{{ materiel.image }}" alt=""> #}
 								{# <img src="http://placehold.it/350x150" alt=""> #}
-								<img src="https://via.placeholder.com/100" alt=""> 
-							</td>
+							{# <img src="https://via.placeholder.com/100" alt=""> </td> #}
 							<td>{{ materiel.nom }}</td>
 							<td>{{ materiel.detail }}</td>
 							<td>
-								<a href="{{ path('edit_mat', {id: materiel.id}) }}">
-									<i class="far fa-edit edigray"></i>
+								<a href="{{ path('edit_mat', {id: materiel.id}) }}" class="btnUD ble">
+									{# <i class="far fa-edit edigray"></i> #}
+									Modifier
 								</a>
-								<a href="{{ path('delete_mat', {id: materiel.id}) }}">
-									<i class="far fa-minus-circle delred"></i>
+								<a href="{{ path('delete_mat', {id: materiel.id}) }}" class="btnUD redy">
+									{# <i class="far fa-minus-circle delred"></i> #}
+									Suprimer
 								</a>
 							</td>
 						</tr>
